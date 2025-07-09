@@ -1,6 +1,6 @@
 import {PostUserRequestBody} from './PostUserRequestBody';
 
-export class PostUserRequestBodyImpl implements PostUserRequestBody{
+export class PostUserRequestBodyImpl implements PostUserRequestBody<string,number>{
     firstName: string;
     lastName: string;
     age: number;

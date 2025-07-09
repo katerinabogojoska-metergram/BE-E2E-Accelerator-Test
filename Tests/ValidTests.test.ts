@@ -12,20 +12,39 @@ describe('Valid Test Cases', () => {
     beforeAll(async () => {
         metergramClient = new MetergramClient();
         await metergramClient.authClient.init();
+        await metergramClient.productService.init();
     });
 
+    function checkProductFields(product: ProductModel) {
+        expect(product.id).toBeDefined();
+        expect(product.id).toBeGreaterThanOrEqual(0);
+        expect(typeof product.id).toBe('number');
+        expect(typeof product.reviews).toBe('object')
+        expect(Array.isArray(product.reviews)).toBe(true);
+        expect(product.reviews.length).toBeGreaterThanOrEqual(0);
+        expect(Array.isArray(product.tags)).toBe(true);
+        expect(product.tags.length).toBeGreaterThanOrEqual(0);
+        if(product.tags.length>0)
+            expect(typeof product.tags[0]).toBe('string');
+    }
 
     test('GetProduct1', async () => {
         const responseEntity = await metergramClient.productService.getProductById(idForProduct)
         expect(responseEntity.status).toEqual(200)
         expect(responseEntity.data.id).toEqual(idForProduct)
-        expect(responseEntity.data.tags[1]).toEqual("mascara")
+        expect(responseEntity.data.thumbnail).toBeDefined()
+        expect(responseEntity.data.tags).toEqual([ 'beauty', 'mascara' ])
+        expect(responseEntity.data.meta.createdAt).toEqual('2025-04-30T09:41:02.053Z')
+        checkProductFields(responseEntity.data);
     });
 
     test('GetAllProducts', async () => {
         const responseEntity = await metergramClient.productService.getProducts();
         expect(responseEntity.status).toEqual(200);
         expect(responseEntity.data.products.length).toBeGreaterThanOrEqual(0);
+        for(let product in responseEntity.data.products) {
+            checkProductFields(responseEntity.data.products[product]);
+        }
     });
 
     test('GetLimitedProductNumber', async () => {
@@ -53,8 +72,13 @@ describe('Valid Test Cases', () => {
 
     test('GetProductsByCategory', async () => {
         const responseEntity = await metergramClient.productService.getProductByCategory(metergramClient.productService.categories[0])
+        console.log(responseEntity.data);
         expect(responseEntity.status).toEqual(200);
         expect(responseEntity.data.products.length).toBeGreaterThanOrEqual(0);
+        for(let product in responseEntity.data.products) {
+            checkProductFields(responseEntity.data.products[product]);
+            expect(responseEntity.data.products[product].category).toEqual(metergramClient.productService.categories[0]);
+        }
     });
 
     test('CreateAProduct', async () => {
@@ -117,7 +141,8 @@ describe('Valid Test Cases', () => {
     });
 
     test('CreateAUser', async () => {
-        const responseEntity = await metergramClient.userService.postUser(UserPredefinedPayloads.postUser);
+        let objData = UserPredefinedPayloads.postUser;
+        const responseEntity = await metergramClient.userService.postUser(objData);
         expect(responseEntity.status).toEqual(201);
         expect(responseEntity.data).toMatchObject({firstName: "emilia", lastName: "clarke", age: 38});
     });

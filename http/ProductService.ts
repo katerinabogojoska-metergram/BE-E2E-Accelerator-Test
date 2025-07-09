@@ -19,7 +19,11 @@ export class ProductService {
 
     constructor(_client: BaseClient) {
         this.client = _client;
-        this._categories = this.getCategories();
+    }
+
+    async init(){
+        let response = await this.getCategories();
+        this._categories=response.data
     }
 
     public getProducts(): ResponseEntity<GetAllProductsResponse> {
@@ -76,7 +80,7 @@ export class ProductService {
         return this.client.delete(("products/" + id));
     }
 
-    public getCategories(): ResponseEntity<string[]> {
-        return this.client.get("products/category-list");
+    public async getCategories(): ResponseEntity<string[]> {
+        return await this.client.get("products/category-list");
     }
 }

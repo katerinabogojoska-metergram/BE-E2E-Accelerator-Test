@@ -81,4 +81,10 @@ describe('Invalid Test Cases', () => {
         expectingForError(404, responseEntity);
     });
 
+    test('CreateAUserInvalidFields', async () => {
+        let objData = UserPredefinedPayloads.postUserInvalidFields;
+        const responseEntity = await metergramClient.userService.postUser(null, objData);
+        expectingForError(400, responseEntity);
+    });
+
 });
