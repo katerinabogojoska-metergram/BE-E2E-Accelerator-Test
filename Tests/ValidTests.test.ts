@@ -6,6 +6,7 @@ import {UserPredefinedPayloads} from "../payloads/UserPredefinedPayloads";
 import { ProductModel} from "../model/get/GetProductResponseBody";
 import '../model/put/PutProductRequestBodyImpl';
 import '../model/post/PostProductRequestBodyImpl';
+import {sharedTests} from './SharedTests';
 
 describe('Valid Test Cases', () => {
     let metergramClient: MetergramClient;
@@ -29,6 +30,10 @@ describe('Valid Test Cases', () => {
         if(product.tags.length>0)
             expect(typeof product.tags[0]).toBe('string');
     }
+
+    test('CheckTokenValidity', async () => {
+        sharedTests(metergramClient.authClient.token);
+    })
 
     test('GetProduct1', async () => {
         const responseEntity = await metergramClient.productService.getProductById(idForProduct)

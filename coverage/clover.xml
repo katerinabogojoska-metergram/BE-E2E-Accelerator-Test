@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1752064196424" clover="3.2.0">
-  <project timestamp="1752064196424" name="All files">
-    <metrics statements="104" coveredstatements="91" conditionals="34" coveredconditionals="20" methods="49" coveredmethods="46" elements="187" coveredelements="157" complexity="0" loc="104" ncloc="104" packages="5" files="15" classes="15"/>
+<coverage generated="1752065963995" clover="3.2.0">
+  <project timestamp="1752065963995" name="All files">
+    <metrics statements="108" coveredstatements="95" conditionals="34" coveredconditionals="20" methods="50" coveredmethods="47" elements="192" coveredelements="162" complexity="0" loc="108" ncloc="108" packages="6" files="16" classes="16"/>
+    <package name="Tests">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="SharedTests.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\Tests\SharedTests.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+      </file>
+    </package>
     <package name="http">
       <metrics statements="71" coveredstatements="64" conditionals="24" coveredconditionals="15" methods="27" coveredmethods="27"/>
       <file name="AuthClient.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\http\AuthClient.ts">

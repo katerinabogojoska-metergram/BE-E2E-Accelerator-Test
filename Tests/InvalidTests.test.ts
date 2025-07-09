@@ -6,6 +6,7 @@ import {UserPredefinedPayloads} from "../payloads/UserPredefinedPayloads";
 import { ProductModel} from "../model/get/GetProductResponseBody";
 import '../model/put/PutProductRequestBodyImpl';
 import '../model/post/PostProductRequestBodyImpl';
+import {sharedTests} from "./SharedTests";
 
 describe('Invalid Test Cases', () => {
     let metergramClient: MetergramClient;
@@ -28,6 +29,10 @@ describe('Invalid Test Cases', () => {
         await metergramClient.authClient.init();
         await metergramClient.productService.init();
     });
+
+    test('CheckTokenValidity', async () => {
+        sharedTests(metergramClient.authClient.token);
+    })
 
     test('GetNonExistingProduct', async () => {
         const responseEntity = await metergramClient.productService.getProductById(nonExistingProductId)
