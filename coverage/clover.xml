@@ -1,70 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1751878527731" clover="3.2.0">
-  <project timestamp="1751878527731" name="All files">
-    <metrics statements="48" coveredstatements="25" conditionals="18" coveredconditionals="5" methods="15" coveredmethods="8" elements="81" coveredelements="38" complexity="0" loc="48" ncloc="48" packages="2" files="4" classes="4"/>
+<coverage generated="1752064196424" clover="3.2.0">
+  <project timestamp="1752064196424" name="All files">
+    <metrics statements="104" coveredstatements="91" conditionals="34" coveredconditionals="20" methods="49" coveredmethods="46" elements="187" coveredelements="157" complexity="0" loc="104" ncloc="104" packages="5" files="15" classes="15"/>
     <package name="http">
-      <metrics statements="33" coveredstatements="16" conditionals="8" coveredconditionals="0" methods="11" coveredmethods="7"/>
+      <metrics statements="71" coveredstatements="64" conditionals="24" coveredconditionals="15" methods="27" coveredmethods="27"/>
+      <file name="AuthClient.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\http\AuthClient.ts">
+        <metrics statements="13" coveredstatements="11" conditionals="4" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="31" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="40" count="0" type="cond" truecount="0" falsecount="2"/>
+      </file>
       <file name="BaseClient.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\http\BaseClient.ts">
-        <metrics statements="15" coveredstatements="8" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="3"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="34" count="3" type="stmt"/>
-        <line num="35" count="3" type="stmt"/>
-        <line num="37" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="39" count="0" type="stmt"/>
+        <metrics statements="21" coveredstatements="20" conditionals="4" coveredconditionals="2" methods="8" coveredmethods="8"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="34" count="29" type="stmt"/>
+        <line num="35" count="29" type="stmt"/>
+        <line num="37" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="38" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="39" count="4" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="60" count="0" type="stmt"/>
-        <line num="70" count="3" type="stmt"/>
-        <line num="75" count="3" type="stmt"/>
-        <line num="85" count="0" type="stmt"/>
+        <line num="54" count="8" type="stmt"/>
+        <line num="60" count="8" type="stmt"/>
+        <line num="70" count="12" type="stmt"/>
+        <line num="75" count="12" type="stmt"/>
+        <line num="79" count="4" type="stmt"/>
+        <line num="85" count="4" type="stmt"/>
+        <line num="89" count="2" type="stmt"/>
+        <line num="95" count="2" type="stmt"/>
+        <line num="99" count="3" type="stmt"/>
+        <line num="104" count="3" type="stmt"/>
+        <line num="114" count="4" type="stmt"/>
       </file>
       <file name="MetergramClient.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\http\MetergramClient.ts">
-        <metrics statements="18" coveredstatements="8" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="4"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="54" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="55" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+      </file>
+      <file name="ProductService.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\http\ProductService.ts">
+        <metrics statements="26" coveredstatements="23" conditionals="12" coveredconditionals="9" methods="13" coveredmethods="13"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="54" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="55" count="2" type="stmt"/>
+        <line num="56" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="57" count="1" type="stmt"/>
         <line num="59" count="0" type="stmt"/>
-        <line num="62" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="72" count="0" type="stmt"/>
+        <line num="64" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="65" count="2" type="stmt"/>
+        <line num="66" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="74" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="75" count="2" type="stmt"/>
+        <line num="76" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="77" count="1" type="stmt"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="84" count="3" type="stmt"/>
+        <line num="88" count="2" type="stmt"/>
+      </file>
+      <file name="UserService.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\http\UserService.ts">
+        <metrics statements="6" coveredstatements="5" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="2"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="15" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="model.post">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="10"/>
+      <file name="PostProductRequestBodyImpl.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\model\post\PostProductRequestBodyImpl.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      </file>
+      <file name="PostProductRequestBodyInvalidImpl.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\model\post\PostProductRequestBodyInvalidImpl.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      </file>
+      <file name="PostUserRequestBodyImpl.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\model\post\PostUserRequestBodyImpl.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+      </file>
+      <file name="PostUserRequestBodyInvalid.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\model\post\PostUserRequestBodyInvalid.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="model.put">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="8"/>
+      <file name="PutProductRequestBodyImpl.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\model\put\PutProductRequestBodyImpl.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      </file>
+      <file name="PutProductRequestBodyInvalid.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\model\put\PutProductRequestBodyInvalid.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      </file>
+    </package>
+    <package name="payloads">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="ProductPredefinedPayloads.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\payloads\ProductPredefinedPayloads.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="80" count="2" type="stmt"/>
+        <line num="131" count="2" type="stmt"/>
+        <line num="139" count="2" type="stmt"/>
+        <line num="171" count="2" type="stmt"/>
+        <line num="179" count="2" type="stmt"/>
+        <line num="211" count="2" type="stmt"/>
+        <line num="218" count="2" type="stmt"/>
+        <line num="269" count="2" type="stmt"/>
+      </file>
+      <file name="UserPredefinedPayloads.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\payloads\UserPredefinedPayloads.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
       </file>
     </package>
     <package name="util">
       <metrics statements="15" coveredstatements="9" conditionals="10" coveredconditionals="5" methods="4" coveredmethods="1"/>
       <file name="Config.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\util\Config.ts">
         <metrics statements="13" coveredstatements="8" conditionals="10" coveredconditionals="5" methods="3" coveredmethods="1"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="19" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="20" count="0" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
         <line num="25" count="0" type="cond" truecount="1" falsecount="1"/>
         <line num="28" count="0" type="cond" truecount="1" falsecount="1"/>
-        <line num="32" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="32" count="2" type="cond" truecount="1" falsecount="1"/>
         <line num="33" count="0" type="stmt"/>
-        <line num="42" count="2" type="stmt"/>
-        <line num="44" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="42" count="4" type="stmt"/>
+        <line num="44" count="4" type="cond" truecount="1" falsecount="1"/>
         <line num="45" count="0" type="stmt"/>
-        <line num="48" count="2" type="stmt"/>
+        <line num="48" count="4" type="stmt"/>
       </file>
       <file name="Errors.ts" path="C:\Users\kateb\Desktop\Metergram-Repos\BE-E2E-Accelerator\util\Errors.ts">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="10" count="1" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
       </file>
     </package>

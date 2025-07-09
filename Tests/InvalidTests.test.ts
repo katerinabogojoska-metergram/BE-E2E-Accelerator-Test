@@ -4,6 +4,8 @@ import {ProductPredefinedPayloads} from "../payloads/ProductPredefinedPayloads";
 import { responseEntity} from "express";
 import {UserPredefinedPayloads} from "../payloads/UserPredefinedPayloads";
 import { ProductModel} from "../model/get/GetProductResponseBody";
+import '../model/put/PutProductRequestBodyImpl';
+import '../model/post/PostProductRequestBodyImpl';
 
 describe('Invalid Test Cases', () => {
     let metergramClient: MetergramClient;

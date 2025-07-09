@@ -4,6 +4,8 @@ import {ProductPredefinedPayloads} from "../payloads/ProductPredefinedPayloads";
 import { responseEntity} from "express";
 import {UserPredefinedPayloads} from "../payloads/UserPredefinedPayloads";
 import { ProductModel} from "../model/get/GetProductResponseBody";
+import '../model/put/PutProductRequestBodyImpl';
+import '../model/post/PostProductRequestBodyImpl';
 
 describe('Valid Test Cases', () => {
     let metergramClient: MetergramClient;
@@ -72,7 +74,6 @@ describe('Valid Test Cases', () => {
 
     test('GetProductsByCategory', async () => {
         const responseEntity = await metergramClient.productService.getProductByCategory(metergramClient.productService.categories[0])
-        console.log(responseEntity.data);
         expect(responseEntity.status).toEqual(200);
         expect(responseEntity.data.products.length).toBeGreaterThanOrEqual(0);
         for(let product in responseEntity.data.products) {
