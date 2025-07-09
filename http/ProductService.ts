@@ -46,6 +46,10 @@ export class ProductService {
         return this.client.get("products/category/" + category);
     }
 
+    public getProductByCategoryNumber(category: number): ResponseEntity<GetAllProductsResponse> {
+        return this.client.get("products/category/" + category);
+    }
+
     public postProduct(payload?: PostProductModelImpl, payloadInvalid?: PostProductModelInvalid): ResponseEntity<ProductModel> {
         if(payload) {
             return this.client.post("products/add", payload)

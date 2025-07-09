@@ -9,4 +9,8 @@ export class UserPredefinedPayloads{
     static postUserInvalidFields = new PostUserRequestBodyInvalid(
         123132, 332211, "emilia"
     );
+
+    static postUserImpossibleAge = new PostUserRequestBodyImpl(
+        "emilia", "clarke", 300
+    );
 }

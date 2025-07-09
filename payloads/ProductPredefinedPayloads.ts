@@ -208,7 +208,114 @@ export class ProductPredefinedPayloads {
         [1010, 2020, 3030]
     );
 
+    static patchProductDiscountMoreThan100: PatchProductRequestBody = {
+        price: 8.49,
+        discountPercentage: 200.22,
+        stock: 15,
+        rating: 4.8,
+    };
 
+    static putProductDiscountMoreThan100 = new PutProductModelImpl(
+        "Updated Essence Mascara Lash Princess", // updated title
+        "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+        "beauty",
+        9.99,
+        170.17,
+        4.94,
+        5,
+        ["beauty", "mascara"],
+        "Essence",
+        "RCH45Q1A",
+        2,
+        new PutDimensionsImpl(23.17, 14.43, 28.01),
+        "1 month warranty",
+        "Ships in 1 month",
+        "Low Stock",
+        [
+            new PutReviewImpl(
+                2,
+                "Very unhappy with my purchase!",
+                "2024-05-23T08:56:21.618Z",
+                "John Doe",
+                "john.doe@x.dummyjson.com"
+            ),
+            new PutReviewImpl(
+                2,
+                "Not as described!",
+                "2024-05-23T08:56:21.618Z",
+                "Nolan Gonzalez",
+                "nolan.gonzalez@x.dummyjson.com"
+            ),
+            new PutReviewImpl(
+                5,
+                "Very satisfied!",
+                "2024-05-23T08:56:21.618Z",
+                "Scarlett Wright",
+                "scarlett.wright@x.dummyjson.com"
+            )
+        ],
+        "30 days return policy",
+        24,
+        new PutMetaImpl(
+            "2024-05-23T08:56:21.618Z",
+            "2024-05-23T08:56:21.618Z",
+            "9164035109868",
+            "..."
+        ),
+        "...",
+        ["...", "...", "..."]
+    );
+
+    static postProductDiscountMoreThan100 = new PostProductModelImpl(
+        "Essence Mascara Lash Princess",
+        "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+        "beauty",
+        9.99,
+        170.17,
+        4.94,
+        5,
+        ["beauty", "mascara"],
+        "Essence",
+        "RCH45Q1A",
+        2,
+        new PostDimensionsImpl(23.17, 14.43, 28.01),
+        "1 month warranty",
+        "Ships in 1 month",
+        "Low Stock",
+        [
+            new PostReviewImpl(
+                2,
+                "Very unhappy with my purchase!",
+                "2024-05-23T08:56:21.618Z",
+                "John Doe",
+                "john.doe@x.dummyjson.com"
+            ),
+            new PostReviewImpl(
+                2,
+                "Not as described!",
+                "2024-05-23T08:56:21.618Z",
+                "Nolan Gonzalez",
+                "nolan.gonzalez@x.dummyjson.com"
+            ),
+            new PostReviewImpl(
+                5,
+                "Very satisfied!",
+                "2024-05-23T08:56:21.618Z",
+                "Scarlett Wright",
+                "scarlett.wright@x.dummyjson.com"
+            )
+        ],
+        "30 days return policy",
+        24,
+        new PostMetaImpl(
+            "2024-05-23T08:56:21.618Z",
+            "2024-05-23T08:56:21.618Z",
+            "9164035109868",
+            "..."
+        ),
+        "...", // thumbnail
+        ["...", "...", "..."]
+    );
 }
 
 // reviews: [

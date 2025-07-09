@@ -136,6 +136,8 @@ describe('Valid Test Cases', () => {
         const responseEntity = await metergramClient.productService.deleteProduct(idForProduct)
         expect(responseEntity.status).toEqual(200);
         expect(responseEntity.data.id).toBeDefined();
+        expect(responseEntity.data.id).toEqual(idForProduct);
+        checkProductFields(responseEntity.data);
         expect(responseEntity.data.deletedOn).toBeDefined();
         expect(responseEntity.data.isDeleted).toBeDefined();
     });
@@ -144,6 +146,8 @@ describe('Valid Test Cases', () => {
         let objData = UserPredefinedPayloads.postUser;
         const responseEntity = await metergramClient.userService.postUser(objData);
         expect(responseEntity.status).toEqual(201);
+        expect(responseEntity.data.id).toBeDefined()
+        expect(typeof responseEntity.data.id).toBe('number')
         expect(responseEntity.data).toMatchObject({firstName: "emilia", lastName: "clarke", age: 38});
     });
 

@@ -3,7 +3,7 @@ export interface GetAllProductsResponse {
     total: number;
     skip: number;
     limit: number;
-    errorMessage?: string;
+    message?: string;
 }
 
 export interface ProductModel {
