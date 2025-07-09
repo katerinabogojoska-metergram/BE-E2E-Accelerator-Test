@@ -1,6 +1,6 @@
 import * as PostIntrfc from "../post/PostProductRequestBody"
 
-export class PostDimensions implements PostIntrfc.PostDimensions {
+export class PostDimensionsImpl implements PostIntrfc.PostDimensions<number> {
     constructor(
         public width: number,
         public height: number,
@@ -8,7 +8,7 @@ export class PostDimensions implements PostIntrfc.PostDimensions {
     ) {}
 }
 
-export class PostReview implements PostIntrfc.PostReview{
+export class PostReviewImpl implements PostIntrfc.PostReview<string,number>{
     constructor(
         public rating: number,
         public comment: string,
@@ -18,7 +18,7 @@ export class PostReview implements PostIntrfc.PostReview{
     ) {}
 }
 
-export class PostMeta implements PostIntrfc.PostMeta{
+export class PostMetaImpl implements PostIntrfc.PostMeta{
     constructor(
         public createdAt: string,  // ISO date string
         public updatedAt: string,  // ISO date string
@@ -27,7 +27,7 @@ export class PostMeta implements PostIntrfc.PostMeta{
     ) {}
 }
 
-export class PostProductModel implements PostIntrfc.PostProductModel {
+export class PostProductModelImpl implements PostIntrfc.PostProductModel<string,number> {
     constructor(
         public title: string,
         public description: string,
@@ -40,14 +40,14 @@ export class PostProductModel implements PostIntrfc.PostProductModel {
         public brand: string,
         public sku: string,
         public weight: number,
-        public dimensions: PostDimensions,
+        public dimensions: PostDimensionsImpl,
         public warrantyInformation: string,
         public shippingInformation: string,
         public availabilityStatus: string,
-        public reviews: PostReview[],
+        public reviews: PostReviewImpl[],
         public returnPolicy: string,
         public minimumOrderQuantity: number,
-        public meta: PostMeta,
+        public meta: PostMetaImpl,
         public thumbnail: string,
         public images: string[]
     ) {}

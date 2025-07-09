@@ -1,6 +1,6 @@
 import {PutDimensions, PutMeta, PutProductModel, PutReview} from "./PutProductRequestBody";
 
-export class PutDimensionsImpl implements PutDimensions {
+export class PutDimensionsImpl implements PutDimensions<number> {
     constructor(
         public width: number,
         public height: number,
@@ -8,7 +8,7 @@ export class PutDimensionsImpl implements PutDimensions {
     ) {}
 }
 
-export class PutReviewImpl implements PutReview {
+export class PutReviewImpl implements PutReview<string,number> {
     constructor(
         public rating: number,
         public comment: string,
@@ -27,7 +27,7 @@ export class PutMetaImpl implements PutMeta {
     ) {}
 }
 
-export class PutProductModelImpl implements PutProductModel {
+export class PutProductModelImpl implements PutProductModel<string,number> {
     constructor(
         public title: string,
         public description: string,
@@ -40,15 +40,17 @@ export class PutProductModelImpl implements PutProductModel {
         public brand: string,
         public sku: string,
         public weight: number,
-        public dimensions: PutDimensions,
+        public dimensions: PutDimensionsImpl,
         public warrantyInformation: string,
         public shippingInformation: string,
         public availabilityStatus: string,
-        public reviews: PutReview[],
+        public reviews: PutReviewImpl[],
         public returnPolicy: string,
         public minimumOrderQuantity: number,
-        public meta: PutMeta,
+        public meta: PutMetaImpl,
         public thumbnail: string,
         public images: string[]
     ) {}
+
+
 }

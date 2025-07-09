@@ -1,39 +1,39 @@
-export interface PostProductModel {
-    title: string;
-    description: string;
-    category: string;
-    price: number;
-    discountPercentage: number;
-    rating: number;
-    stock: number;
-    tags: string[];
-    brand: string;
-    sku: string;
-    weight: number;
-    dimensions: PostDimensions;
-    warrantyInformation: string;
-    shippingInformation: string;
-    availabilityStatus: string;
-    reviews: PostReview[];
-    returnPolicy: string;
-    minimumOrderQuantity: number;
+export interface PostProductModel<Type1,Type2> {
+    title: Type1;
+    description: Type1;
+    category: Type1;
+    price: Type2;
+    discountPercentage: Type2;
+    rating: Type2;
+    stock: Type2;
+    tags: Type1[];
+    brand: Type1;
+    sku: Type1;
+    weight: Type2;
+    dimensions: PostDimensions<Type2>;
+    warrantyInformation: Type1;
+    shippingInformation: Type1;
+    availabilityStatus: Type1;
+    reviews: PostReview<Type1,Type2>[];
+    returnPolicy: Type1;
+    minimumOrderQuantity: Type2;
     meta: PostMeta;
-    thumbnail: string;
-    images: string[];
+    thumbnail: Type1;
+    images: Type1[];
 }
 
-export interface PostDimensions {
-    width: number;
-    height: number;
-    depth: number;
+export interface PostDimensions<Type2> {
+    width: Type2;
+    height: Type2;
+    depth: Type2;
 }
 
-export interface PostReview {
-    rating: number;
-    comment: string;
-    date: string; // ISO date string
-    reviewerName: string;
-    reviewerEmail: string;
+export interface PostReview<Type1,Type2> {
+    rating: Type2;
+    comment: Type1;
+    date: Type1; // ISO date Type1
+    reviewerName: Type1;
+    reviewerEmail: Type1;
 }
 
 export interface PostMeta {

@@ -1,14 +1,13 @@
 import { BaseClient } from "./BaseClient";
 import {GetAllProductsResponse, ProductModel} from "../model/get/GetProductResponseBody";
 import { ResponseEntity } from "express";
-import {Recipe, RecipeResponse} from "../model/get/GetRecipeResponseBody";
-// import {RecipePredefinedPayloads} from "../payloads/RecipePredefinedPayloads";
-// import {DeleteRecipeResponse} from "../model/delete/DeleteRecipeResponseBody";
-import {ProductPredefinedPayloads} from "../payloads/ProductPredefinedPayloads";
 import {DeleteProductResponseBody} from "../model/delete/DeleteProductResponseBody";
-import {PostProductModel} from "../model/post/PostProductRequestBody";
 import {PatchProductRequestBody} from "../model/patch/PatchProductRequestBody";
-// import {GetAllCategoriesResponse} from "../model/get/GetProductCategoriesResponseBody";
+import {PatchProductRequestBodyInvalid} from "../model/patch/PatchProductRequestBodyInvalid";
+import {PostProductModelImpl} from "../model/post/PostProductRequestBodyImpl";
+import {PostProductModelInvalid} from "../model/post/PostProductRequestBodyInvalidImpl";
+import {PutProductModelImpl} from "../model/put/PutProductRequestBodyImpl";
+import {PutProductModelInvalid} from "../model/put/PutProductRequestBodyInvalid";
 
 
 export class ProductService {
@@ -43,16 +42,34 @@ export class ProductService {
         return this.client.get("products/category/" + category);
     }
 
-    public postProduct(payload: PostProductModel): ResponseEntity<ProductModel> {
-        return this.client.post("products/add", payload)
+    public postProduct(payload?: PostProductModelImpl, payloadInvalid?: PostProductModelInvalid): ResponseEntity<ProductModel> {
+        if(payload) {
+            return this.client.post("products/add", payload)
+        } else if (payloadInvalid) {
+            return this.client.post("products/add", payloadInvalid)
+        } else {
+            console.error("Payloads cannot both be null")
+        }
     }
 
-    public patchProduct(id: number, payload: PatchProductRequestBody): ResponseEntity<RecipeResponse> {
-        return this.client.patch("products/" + id, ProductPredefinedPayloads.patchProduct);
+    public patchProduct(id: number, payload?: PatchProductRequestBody, payloadInvalid?: PatchProductRequestBodyInvalid): ResponseEntity<ProductModel> {
+        if(payload) {
+            return this.client.patch("products/" + id, payload);
+        } else if (payloadInvalid) {
+            return this.client.patch("products/" + id, payloadInvalid);
+        } else {
+            console.error("Payloads cannot both be null")
+        }
     }
 
-    public putProduct(id: number, payload: PostProductModel): ResponseEntity<RecipeResponse> {
-        return this.client.put("products/" + id, ProductPredefinedPayloads.putProduct);
+    public putProduct(id: number, payload?: PutProductModelImpl, payloadInvalid?: PutProductModelInvalid): ResponseEntity<ProductModel> {
+        if(payload) {
+            return this.client.put("products/" + id, payload);
+        } else if (payloadInvalid) {
+            return this.client.patch("products/" + id, payloadInvalid);
+        } else {
+            console.error("Payloads cannot both be null")
+        }
     }
 
     public deleteProduct(id: number): ResponseEntity<DeleteProductResponseBody> {
